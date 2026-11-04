@@ -13,7 +13,7 @@ export function PageHero({
   description?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-navy-950 pb-20 pt-40 text-white lg:pb-24 lg:pt-48">
+    <section className="relative overflow-hidden bg-navy-950 pb-14 pt-32 text-white sm:pb-20 sm:pt-40 lg:pb-24 lg:pt-48">
       <div className="dot-grid pointer-events-none absolute inset-0 opacity-40" />
       <div className="pointer-events-none absolute -right-32 -top-24 size-[420px] rounded-full bg-brand-600/25 blur-3xl" />
       <div className="pointer-events-none absolute -left-24 bottom-0 size-[320px] rounded-full bg-mint-600/15 blur-3xl" />
@@ -27,12 +27,12 @@ export function PageHero({
           <span className="text-mint-400">{eyebrow}</span>
         </nav>
 
-        <h1 className="mt-6 max-w-3xl font-display text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
+        <h1 className="mt-6 max-w-3xl font-display text-[2.1rem] font-semibold leading-[1.15] tracking-tight sm:text-5xl sm:leading-[1.1] lg:text-6xl">
           {title}{" "}
           {highlight && <span className="text-brand-400">{highlight}</span>}
         </h1>
         {description && (
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/65">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/65 sm:mt-6 sm:text-lg">
             {description}
           </p>
         )}

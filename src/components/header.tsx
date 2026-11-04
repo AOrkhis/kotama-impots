@@ -49,7 +49,7 @@ export function Header() {
               width={170}
               height={56}
               priority
-              className="h-11 w-auto"
+              className="h-9 w-auto sm:h-11"
             />
           </span>
         </Link>
@@ -101,7 +101,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-navy-800/10 bg-white/95 backdrop-blur-xl lg:hidden">
+        <div className="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-navy-800/10 bg-white/95 backdrop-blur-xl lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col px-5 py-4">
             {links.map((l) => {
               const active =

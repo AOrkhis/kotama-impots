@@ -88,7 +88,7 @@ export default function Contact() {
                 </ul>
 
                 {/* Map-style location card */}
-                <div className="relative mt-6 overflow-hidden rounded-3xl bg-navy-900 p-8 text-white">
+                <div className="relative mt-6 overflow-hidden rounded-3xl bg-navy-900 p-7 text-white sm:p-8">
                   <div className="dot-grid pointer-events-none absolute inset-0 opacity-50" />
                   <div className="pointer-events-none absolute -right-16 -top-16 size-48 rounded-full bg-brand-500/25 blur-3xl" />
                   <div className="relative">

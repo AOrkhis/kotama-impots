@@ -58,7 +58,7 @@ export default function APropos() {
         />
 
         {/* Mission */}
-        <section className="py-24 lg:py-32">
+        <section className="py-20 lg:py-32">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
               <div>
@@ -112,7 +112,7 @@ export default function APropos() {
         </section>
 
         {/* President */}
-        <section className="relative overflow-hidden bg-navy-950 py-24 text-white lg:py-32">
+        <section className="relative overflow-hidden bg-navy-950 py-20 text-white lg:py-32">
           <div className="dot-grid pointer-events-none absolute inset-0 opacity-40" />
           <div className="pointer-events-none absolute -left-32 top-0 size-[400px] rounded-full bg-brand-600/20 blur-3xl" />
 
@@ -120,7 +120,7 @@ export default function APropos() {
             <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
               {/* portrait card */}
               <div className="relative mx-auto w-full max-w-sm">
-                <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-b from-navy-800 to-navy-900 p-10 text-center shadow-2xl">
+                <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-b from-navy-800 to-navy-900 p-8 text-center shadow-2xl sm:p-10">
                   <div className="mx-auto flex size-28 items-center justify-center rounded-full bg-gradient-to-br from-brand-400 to-brand-600 font-display text-4xl font-semibold text-white shadow-xl shadow-brand-600/30">
                     AA
                   </div>
@@ -174,7 +174,7 @@ export default function APropos() {
         </section>
 
         {/* Mini CTA */}
-        <section className="py-24 text-center lg:py-32">
+        <section className="py-20 text-center lg:py-32">
           <div className="mx-auto max-w-3xl px-5">
             <Target className="mx-auto size-12 text-brand-600" />
             <h2 className="mt-6 font-display text-4xl font-semibold tracking-tight text-navy-900 sm:text-5xl">
@@ -186,7 +186,7 @@ export default function APropos() {
             </p>
             <Link
               href="/contact"
-              className="group mt-9 inline-flex items-center gap-2 rounded-full bg-navy-800 px-8 py-4 text-sm font-bold text-white shadow-xl shadow-navy-800/25 transition-all hover:-translate-y-0.5 hover:bg-brand-600"
+              className="group mt-9 inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy-800 px-8 py-4 text-sm font-bold text-white shadow-xl shadow-navy-800/25 transition-all hover:-translate-y-0.5 hover:bg-brand-600 sm:w-auto"
             >
               Prenez rendez-vous
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />

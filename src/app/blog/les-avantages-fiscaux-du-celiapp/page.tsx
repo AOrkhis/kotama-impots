@@ -40,7 +40,7 @@ export default function ArticleCeliapp() {
       <Header />
       <main className="flex-1">
         {/* Article hero */}
-        <section className="relative overflow-hidden bg-navy-950 pb-16 pt-40 text-white lg:pb-20 lg:pt-48">
+        <section className="relative overflow-hidden bg-navy-950 pb-14 pt-32 text-white sm:pb-16 sm:pt-40 lg:pb-20 lg:pt-48">
           <div className="dot-grid pointer-events-none absolute inset-0 opacity-40" />
           <div className="pointer-events-none absolute -right-32 -top-24 size-[400px] rounded-full bg-brand-600/25 blur-3xl" />
           <div className="relative mx-auto max-w-3xl px-5">
@@ -60,7 +60,7 @@ export default function ArticleCeliapp() {
                 21 août 2024
               </span>
             </div>
-            <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.15] tracking-tight sm:text-5xl">
+            <h1 className="mt-5 font-display text-[2rem] font-semibold leading-[1.15] tracking-tight sm:text-5xl">
               Les avantages fiscaux du{" "}
               <span className="text-brand-400">CELIAPP</span>
             </h1>
@@ -86,9 +86,9 @@ export default function ArticleCeliapp() {
               {points.map((p, i) => (
                 <div
                   key={p.title}
-                  className="flex gap-6 rounded-3xl border border-navy-800/10 bg-white p-6 shadow-lg shadow-navy-900/5 sm:p-8"
+                  className="flex gap-4 rounded-3xl border border-navy-800/10 bg-white p-6 shadow-lg shadow-navy-900/5 sm:gap-6 sm:p-8"
                 >
-                  <span className="font-display text-4xl font-semibold text-brand-500/60">
+                  <span className="font-display text-3xl font-semibold text-brand-500/60 sm:text-4xl">
                     {i + 1}
                   </span>
                   <div>
@@ -103,7 +103,7 @@ export default function ArticleCeliapp() {
               ))}
             </div>
 
-            <div className="mt-12 rounded-3xl bg-navy-800 p-8 text-white sm:p-10">
+            <div className="mt-12 rounded-3xl bg-navy-800 p-7 text-white sm:p-10">
               <h2 className="font-display text-2xl font-semibold">En résumé</h2>
               <p className="mt-3 leading-relaxed text-white/70">
                 Le CELIAPP permet de maximiser les économies pour un achat
@@ -114,7 +114,7 @@ export default function ArticleCeliapp() {
             </div>
 
             {/* Prev / Next */}
-            <nav className="mt-14 flex items-center justify-between border-t border-navy-800/10 pt-8">
+            <nav className="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-navy-800/10 pt-8">
               <Link
                 href="/blog/impact-de-l-intelligence-artificielle-sur-les-marches-boursiers"
                 className="group flex items-center gap-2 text-sm font-bold text-brand-600 hover:text-navy-800"

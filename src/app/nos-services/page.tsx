@@ -244,7 +244,7 @@ export default function NosServices() {
         {/* Testimonial */}
         <section className="pb-24">
           <div className="mx-auto max-w-4xl px-5 lg:px-8">
-            <figure className="relative overflow-hidden rounded-3xl bg-navy-800 p-10 text-center text-white shadow-2xl shadow-navy-900/20 sm:p-12">
+            <figure className="relative overflow-hidden rounded-3xl bg-navy-800 p-8 text-center text-white shadow-2xl shadow-navy-900/20 sm:p-12">
               <div className="dot-grid pointer-events-none absolute inset-0 opacity-50" />
               <Quote className="relative mx-auto size-10 text-mint-400" />
               <blockquote className="relative mt-6 font-display text-2xl leading-relaxed">

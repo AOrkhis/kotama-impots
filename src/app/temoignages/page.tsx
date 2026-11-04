@@ -135,7 +135,7 @@ export default function Temoignages() {
               </p>
               <Link
                 href="/contact"
-                className="group mt-8 inline-flex items-center gap-2 rounded-full bg-navy-800 px-8 py-4 text-sm font-bold text-white shadow-xl shadow-navy-800/25 transition-all hover:-translate-y-0.5 hover:bg-brand-600"
+                className="group mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-navy-800 px-8 py-4 text-sm font-bold text-white shadow-xl shadow-navy-800/25 transition-all hover:-translate-y-0.5 hover:bg-brand-600 sm:w-auto"
               >
                 Contactez-nous
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />

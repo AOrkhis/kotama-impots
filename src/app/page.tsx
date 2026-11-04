@@ -91,14 +91,14 @@ export default function Home() {
           <div className="pointer-events-none absolute -top-32 right-[-10%] size-[480px] rounded-full bg-brand-300/30 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-40 left-[-8%] size-[420px] rounded-full bg-mint-300/30 blur-3xl" />
 
-          <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 pb-20 pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:pb-28 lg:pt-44">
-            <div className="reveal">
+          <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-32 sm:pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:px-8 lg:pb-28 lg:pt-44">
+            <div className="reveal text-center lg:text-left">
               <span className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-white/80 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-brand-600 shadow-sm backdrop-blur">
                 <Sparkles className="size-3.5" />
                 Comptable à Montréal
               </span>
 
-              <h1 className="mt-6 font-display text-[2.6rem] font-semibold leading-[1.08] tracking-tight text-navy-900 sm:text-6xl lg:text-[4.2rem]">
+              <h1 className="mt-6 font-display text-[2.2rem] font-semibold leading-[1.12] tracking-tight text-navy-900 sm:text-6xl sm:leading-[1.08] lg:text-[4.2rem]">
                 L&apos;expertise fiscale,{" "}
                 <span className="relative whitespace-nowrap text-brand-600">
                   à bon prix
@@ -118,30 +118,30 @@ export default function Home() {
                 </span>
               </h1>
 
-              <p className="mt-7 max-w-xl text-lg leading-relaxed text-navy-800/70">
+              <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-navy-800/70 sm:mt-7 sm:text-lg lg:mx-0">
                 Bienvenue chez <strong className="text-navy-900">Kotama Impôts</strong>,
                 votre partenaire de confiance en comptabilité et fiscalité dans la
                 grande région de Montréal. Tenue de livres, déclaration d&apos;impôts
                 et comptabilité d&apos;entreprise — <em>personnalisés pour vous</em>.
               </p>
 
-              <div className="mt-9 flex flex-wrap items-center gap-4">
+              <div className="mt-8 flex flex-col items-center gap-3 sm:mt-9 sm:flex-row sm:justify-center sm:gap-4 lg:justify-start">
                 <Link
                   href="/contact"
-                  className="group flex items-center gap-2 rounded-full bg-navy-800 px-7 py-3.5 text-sm font-bold text-white shadow-xl shadow-navy-800/30 transition-all hover:-translate-y-0.5 hover:bg-brand-600 hover:shadow-brand-600/40"
+                  className="group flex w-full items-center justify-center gap-2 rounded-full bg-navy-800 px-7 py-3.5 text-sm font-bold text-white shadow-xl shadow-navy-800/30 transition-all hover:-translate-y-0.5 hover:bg-brand-600 hover:shadow-brand-600/40 sm:w-auto"
                 >
                   Consultation gratuite
                   <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <Link
                   href="/nos-services"
-                  className="rounded-full border-2 border-navy-800/15 bg-white/70 px-7 py-3.5 text-sm font-bold text-navy-800 backdrop-blur transition-all hover:border-brand-500 hover:text-brand-600"
+                  className="w-full rounded-full border-2 border-navy-800/15 bg-white/70 px-7 py-3.5 text-center text-sm font-bold text-navy-800 backdrop-blur transition-all hover:border-brand-500 hover:text-brand-600 sm:w-auto"
                 >
                   Découvrir nos services
                 </Link>
               </div>
 
-              <ul className="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm font-semibold text-navy-800/80">
+              <ul className="mt-9 flex flex-wrap justify-center gap-x-7 gap-y-3 text-sm font-semibold text-navy-800/80 lg:justify-start">
                 {["Particuliers", "Travailleurs autonomes", "Propriétaires de PME"].map(
                   (t) => (
                     <li key={t} className="flex items-center gap-2">
@@ -205,7 +205,7 @@ export default function Home() {
                 </div>
 
                 {/* floating chips */}
-                <div className="animate-float absolute -left-4 top-10 z-20 flex items-center gap-2.5 rounded-2xl border border-navy-800/10 bg-white/95 px-4 py-3 shadow-xl shadow-navy-900/10 backdrop-blur sm:-left-8">
+                <div className="animate-float absolute left-2 top-8 z-20 flex items-center gap-2.5 rounded-2xl border border-navy-800/10 bg-white/95 px-3 py-2.5 shadow-xl shadow-navy-900/10 backdrop-blur sm:-left-8 sm:top-10 sm:px-4 sm:py-3">
                   <span className="flex size-9 items-center justify-center rounded-xl bg-brand-500/15 text-brand-600">
                     <ShieldCheck className="size-5" />
                   </span>
@@ -215,7 +215,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="animate-float-slow absolute -right-3 bottom-12 z-20 flex items-center gap-2.5 rounded-2xl border border-navy-800/10 bg-navy-800 px-4 py-3 shadow-xl shadow-navy-900/25 sm:-right-6">
+                <div className="animate-float-slow absolute bottom-10 right-2 z-20 flex items-center gap-2.5 rounded-2xl border border-navy-800/10 bg-navy-800 px-3 py-2.5 shadow-xl shadow-navy-900/25 sm:-right-6 sm:bottom-12 sm:px-4 sm:py-3">
                   <span className="flex size-9 items-center justify-center rounded-xl bg-mint-400/20 text-mint-400">
                     <Calculator className="size-5" />
                   </span>
@@ -242,7 +242,7 @@ export default function Home() {
         </div>
 
         {/* ============ SERVICES ============ */}
-        <section id="services" className="relative py-24 lg:py-32">
+        <section id="services" className="relative py-20 lg:py-32">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-600">
@@ -304,7 +304,7 @@ export default function Home() {
         </section>
 
         {/* ============ DARK FEATURE SECTION ============ */}
-        <section className="relative overflow-hidden bg-navy-950 py-24 text-white lg:py-32">
+        <section className="relative overflow-hidden bg-navy-950 py-20 text-white lg:py-32">
           <div className="dot-grid pointer-events-none absolute inset-0 opacity-40" />
           <div className="pointer-events-none absolute -left-32 top-1/3 size-[400px] rounded-full bg-brand-600/20 blur-3xl" />
           <div className="pointer-events-none absolute -right-32 bottom-0 size-[400px] rounded-full bg-mint-600/15 blur-3xl" />
@@ -361,7 +361,7 @@ export default function Home() {
         </section>
 
         {/* ============ TESTIMONIAL + FAQ ============ */}
-        <section className="py-24 lg:py-32">
+        <section className="py-20 lg:py-32">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="grid gap-14 lg:grid-cols-[1fr_1.15fr] lg:items-start">
               <div className="lg:sticky lg:top-32">
@@ -415,7 +415,7 @@ export default function Home() {
         </section>
 
         {/* ============ CONTACT ============ */}
-        <section id="contact" className="relative overflow-hidden py-24 lg:py-32">
+        <section id="contact" className="relative overflow-hidden py-20 lg:py-32">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-navy-800/20 to-transparent" />
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">

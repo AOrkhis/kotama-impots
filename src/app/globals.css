@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Brand palette — from Kotama Impôts logo */
+  --color-navy-950: #081c36;
+  --color-navy-900: #0d2a4d;
+  --color-navy-800: #123a66;
+  --color-navy-700: #1b4a80;
+  --color-navy-600: #25599a;
+  --color-navy-500: #3369ae;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --color-brand-600: #2e7fb5;
+  --color-brand-500: #4e9bc8;
+  --color-brand-400: #6fb3d8;
+  --color-brand-300: #9fcfe8;
+  --color-brand-100: #dcedf7;
+  --color-brand-50: #f0f8fc;
+
+  --color-mint-600: #3f9e56;
+  --color-mint-500: #5fb96f;
+  --color-mint-400: #8fd08b;
+  --color-mint-300: #b3e0ae;
+  --color-mint-100: #e4f5e2;
+
+  --color-paper: #f7fafc;
+  --color-ink: #0e1f38;
+
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-float-slow: float 10s ease-in-out infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-brand-300);
+  color: var(--color-navy-900);
+}
+
+/* Subtle dotted texture used on dark sections */
+.dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.dot-grid-dark {
+  background-image: radial-gradient(rgba(13, 42, 77, 0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.reveal {
+  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
 }

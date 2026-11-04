@@ -1,12 +1,18 @@
 "use client";
 
-import { useState } from "react";
-import { Send, CheckCircle2 } from "lucide-react";
+import { useActionState } from "react";
+import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { sendContactEmail, type ContactState } from "@/app/actions";
+
+const initialState: ContactState = { status: "idle" };
 
 export function ContactForm() {
-  const [sent, setSent] = useState(false);
+  const [state, formAction, pending] = useActionState(
+    sendContactEmail,
+    initialState
+  );
 
-  if (sent) {
+  if (state.status === "success") {
     return (
       <div className="flex h-full min-h-80 flex-col items-center justify-center rounded-3xl border border-mint-400/40 bg-mint-100/40 p-10 text-center">
         <CheckCircle2 className="size-14 text-mint-600" />
@@ -26,12 +32,19 @@ export function ContactForm() {
 
   return (
     <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSent(true);
-      }}
+      action={formAction}
       className="rounded-3xl border border-navy-800/10 bg-white p-6 shadow-xl shadow-navy-900/5 sm:p-8"
     >
+      {/* Honeypot — invisible to humans, catches bots */}
+      <input
+        type="checkbox"
+        name="botcheck"
+        tabIndex={-1}
+        autoComplete="off"
+        className="hidden"
+        aria-hidden="true"
+      />
+
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="nom" className="mb-1.5 block text-sm font-bold text-navy-900">
@@ -66,12 +79,30 @@ export function ContactForm() {
           className={`${inputClass} resize-none`}
         />
       </div>
+
+      {state.status === "error" && (
+        <p className="mt-4 flex items-center gap-2 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">
+          <AlertCircle className="size-4 shrink-0" />
+          {state.message}
+        </p>
+      )}
+
       <button
         type="submit"
-        className="group mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-navy-800 px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-navy-800/25 transition-all hover:bg-brand-600 hover:shadow-brand-600/30 sm:w-auto"
+        disabled={pending}
+        className="group mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-navy-800 px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-navy-800/25 transition-all hover:bg-brand-600 hover:shadow-brand-600/30 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
-        Envoyer le formulaire
-        <Send className="size-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5" />
+        {pending ? (
+          <>
+            Envoi en cours…
+            <Loader2 className="size-4 animate-spin" />
+          </>
+        ) : (
+          <>
+            Envoyer le formulaire
+            <Send className="size-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5" />
+          </>
+        )}
       </button>
     </form>
   );
